@@ -1,7 +1,8 @@
 1.	Create a small test, upon which to build everything	[x]
 2.	Start defining macros for all assertions and stuff later (in a separate
-	header)	[]
+	header)	[x]
 3.	Create a test registry	->	sort of a database where all tests written by
 	users are kept	[]
 4.	Automate test execution	->	"test runner"	[]
-5.	Visual sugar and stuff
+5.	Visual sugar and stuff	->	colors for pass/fail; progress bar for test
+	running	[]

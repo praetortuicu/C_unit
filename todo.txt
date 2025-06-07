@@ -11,14 +11,15 @@
 	such things
 1.5	Add colors to test running
 1.6	Add logging functionality for test failure	->	as CLI flags
+1.7	Add severity levels to codes 	->	INFO, CRITICAL, FAIL etc.
 
 
-2.1	Data Dictionary
+#	2.1	Data Dictionary
 
 -------------------------------------------------------------------------------
 
-1.1	Assertions:		for instance variable data types;
-	Comparisons:	for instances ranges in which a variable can be;
+1.1	Assertions:		for instance equality, inequality etc;
+	Comparisons:	for instances ranges in which a variable can or can not be;
 	Error Throwing:	for instance making sure that the code is throwing a
 					specific error -> this will be interesting to handle because
 					how?
