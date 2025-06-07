@@ -3,7 +3,7 @@
 
 #include	<stdio.h>
 
-
+#define	ASSERT_EQ(expected,	actual)	\
 
 
 
