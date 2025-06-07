@@ -1,5 +1,5 @@
 #include	<stdio.h>
-
+#include	"../include/assertions.h"
 /**
  *	@param	a	->	Number to compare
  *	@param	b	->	Other number to compare
@@ -32,6 +32,23 @@ int	main()	{
 	}	else	{
 		printf("Passed!\n");
 	}
+	
+	int	a	=	5;
+	int	b	=	6;
+	ASSERT_EQ(a,	b);
+	ASSERT_EQ(5,	a);
+
+	unsigned	int	test	=	5;
+	int	break_it	=	5;
+	ASSERT_EQ(test,	break_it);	//	This works??!
+	
+	char	c1	=	'c';
+	char	c2	=	'c';
+	char	c3	=	'd';
+	ASSERT_EQ(c1,	c2);		//	THIS WORKS TOO???!!!!
+	ASSERT_EQ(c1,	c3);
+
+	ASSERT_EQ(test,	c1);
 
 	return	0;
 }

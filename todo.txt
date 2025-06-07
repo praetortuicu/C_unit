@@ -10,6 +10,7 @@
 1.4	A very good idea is to check the functions written for dangling pointers and
 	such things
 1.5	Add colors to test running
+1.6	Add logging functionality for test failure	->	as CLI flags
 
 
 2.1	Data Dictionary
