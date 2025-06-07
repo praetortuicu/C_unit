@@ -1,3 +1,13 @@
+/**
+ *	List of assertion macros necessary for unit testing.
+ *	Date	07/06/25
+ *	Author	Teodor	Ticu
+ *	Version	0.0.3
+ *
+ */
+
+
+
 #ifndef	ASSERTIONS_H
 #define	ASSERTIONS_H
 
@@ -11,10 +21,10 @@
  *	@brief	Basic equality assertion.
  */
 #define	ASSERT_EQ(value1,	value2)	\
-if	(value1	!=	value2)	{\
-	printf("Equality assertion failed. Exit code: %d\n", ERROR_CODE_FALSE);	\
-}	else {\
+if	(value1	==	value2)	{\
 	printf("Equality assertion passed. Exit code: %d\n", ERROR_CODE_TRUE);	\
+}	else {\
+	printf("Equality assertion failed. Exit code: %d\n", ERROR_CODE_FALSE);	\
 }\
 
 
@@ -24,12 +34,11 @@ if	(value1	!=	value2)	{\
  *
  *	@brief	Basic inequality assertion.
  */
-
 #define	ASSERT_NOT_EQ(value1,	value2)	\
-if	(value1	==	value2)	{\
-	printf("Inequality assertion failed. Exit code:	%d\n", ERROR_CODE_FALSE);	\
+if	(value1	!=	value2)	{\
+	printf("Inequality assertion passed. Exit code:	%d\n", ERROR_CODE_TRUE);	\
 }	else	{\
-	printf("Inequality assertion passed. Exit code: %d\n", ERROR_CODE_TRUE);	\
+	printf("Inequality assertion failed. Exit code: %d\n", ERROR_CODE_FALSE);	\
 }\
 
 
