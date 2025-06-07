@@ -9,6 +9,8 @@
 	gotta get that into this thing.
 1.4	A very good idea is to check the functions written for dangling pointers and
 	such things
+1.5	Add colors to test running
+
 
 2.1	Data Dictionary
 
