@@ -7,6 +7,8 @@
 	sure, but more like an included header (gotta see how doctest does it).
 1.3	Test cases and subcases are a very nice way of structuring the tests, so I
 	gotta get that into this thing.
+1.4	A very good idea is to check the functions written for dangling pointers and
+	such things
 
 2.1	Data Dictionary
 
@@ -17,4 +19,9 @@
 	Error Throwing:	for instance making sure that the code is throwing a
 					specific error -> this will be interesting to handle because
 					how?
+1.2	Running the tests:	running all the test cases, logging, output, error codes
+						and stuff like that
+
+
+
 
