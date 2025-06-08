@@ -1,5 +1,8 @@
 #include	<stdio.h>
 #include	"../include/assertions.h"
+#include	"../include/error_throwing.h"
+#include	<errno.h>
+
 /**
  *	@param	a	->	Number to compare
  *	@param	b	->	Other number to compare
@@ -16,6 +19,19 @@ const	unsigned	int	test_comparison_function(const	int	a,	const	int	b)	{
 		return	1;
 	}	else	{
 		return	0;
+	}
+}
+
+int	test_func(int	a,	int	b)	{
+	if	(a	<	b)	{
+		errno	=	EBADMSG;
+		return	-1;
+	}	else if	(a	==	b)	{
+		errno	=	EIO;
+		return	-1;
+	}	else	{
+		errno	=	EPERM;
+		return	-1;
 	}
 }
 
@@ -40,15 +56,21 @@ int	main()	{
 
 	unsigned	int	test	=	5;
 	int	break_it	=	5;
-	ASSERT_EQ(test,	break_it);	//	This works??!
+	ASSERT_EQ(test,	break_it);
 	
 	char	c1	=	'c';
 	char	c2	=	'c';
 	char	c3	=	'd';
-	ASSERT_EQ(c1,	c2);		//	THIS WORKS TOO???!!!!
+	ASSERT_EQ(c1,	c2);
 	ASSERT_EQ(c1,	c3);
 
 	ASSERT_EQ(test,	c1);
+
+	CHECK_THROWS(test_func(1,	2));
+	CHECK_THROWS(test_func(2,	2));
+	CHECK_THROWS(test_func(2,	1));
+
+	CHECK_THROWS_ERROR(test_func(1,	2),	EBADMSG);
 
 	return	0;
 }
