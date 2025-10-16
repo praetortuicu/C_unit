@@ -19,7 +19,7 @@
 -------------------------------------------------------------------------------
 
 1.1	Assertions:		for instance equality, inequality etc;
-	Comparisons:	for instances ranges in which a variable can or can not be;
+	Comparisons:	for instance ranges in which a variable can or can not be;
 	Error Throwing:	for instance making sure that the code is throwing a
 					specific error -> this will be interesting to handle because
 					how?

@@ -16,7 +16,7 @@
 /**
  *	@param	Pointer to function being tested
  *
- *	@brief	Check that the function returns an error code. In C, errors
+ *	@brief	Check that the function returns an error code. In C, errors are
  *	just int values. For a full list of error codes check the GNU C project.
  */
 #define	CHECK_THROWS(test_func)	\
